@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-07-09T12:07:20.268Z",
+    "end": "2023-07-09T12:07:33.500Z",
+    "duration": 13232,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fed23440-d5ec-44fc-9d8a-6f1845c69fbe",
+      "title": "",
+      "fullFile": "cypress/integration/cart.ts",
+      "file": "cypress/integration/cart.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "412e0060-3dd2-43ac-90fc-b1d548f5ee17",
+          "title": "Remove 2 Product from Cart and Failed Input Data",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Remove Cart",
+              "fullTitle": "Remove 2 Product from Cart and Failed Input Data Remove Cart",
+              "timedOut": null,
+              "duration": 6941,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\naddToCart.addAllProduct();\naddToCart.assertAddToCart();\ncartPage.removeCart();\ncartPage.cartCheckout();\ncheckoutData.cartCheckout();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.\n    at LoginPage.assertLogin (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\cart.ts:279:25)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\cart.ts:120:19)",
+                "diff": null
+              },
+              "uuid": "958a1be7-3274-47eb-80f4-b3cdf9d1c671",
+              "parentUUID": "412e0060-3dd2-43ac-90fc-b1d548f5ee17",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checkout Failed",
+              "fullTitle": "Remove 2 Product from Cart and Failed Input Data Checkout Failed",
+              "timedOut": null,
+              "duration": 4221,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "checkoutData.cartCheckout();\ncheckoutData.assertInputFail();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#continue`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#continue`, but never found it.\n    at CheckoutInformation.cartCheckout (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\cart.ts:236:12)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\cart.ts:128:22)",
+                "diff": null
+              },
+              "uuid": "28eade73-381f-4e45-9ffa-14c410f0f26a",
+              "parentUUID": "412e0060-3dd2-43ac-90fc-b1d548f5ee17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "958a1be7-3274-47eb-80f4-b3cdf9d1c671",
+            "28eade73-381f-4e45-9ffa-14c410f0f26a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11162,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
